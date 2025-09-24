@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <RCC>
     <qresource prefix="/images">
         <file>images/cut.bmp</file>
@@ -14,3 +15,21 @@
         <file>images/creative-commons-by-line.png</file>
     </qresource>
 </RCC>
+=======
+<RCC>
+    <qresource prefix="/images">
+        <file>images/cut.bmp</file>
+        <file>images/paste.bmp</file>
+        <file>images/120.bmp</file>
+        <file>images/exit.bmp</file>
+        <file>images/BLD.BMP</file>
+        <file>images/ITL.BMP</file>
+        <file>images/open3.bmp</file>
+        <file>images/103.bmp</file>
+        <file>images/WORDUNDR.BMP</file>
+        <file>images/20.ico</file>
+        <file>images/new2.bmp</file>
+        <file>images/creative-commons-by-line.png</file>
+    </qresource>
+</RCC>
+>>>>>>> 944cbf9f21e50e2be7c285e414459730a0cfd2a1
