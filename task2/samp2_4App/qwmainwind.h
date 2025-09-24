@@ -7,6 +7,7 @@
 #include    <QSpinBox>
 #include    <QFontComboBox>
 
+
 namespace Ui {
 class QWMainWind;
 }
@@ -49,6 +50,7 @@ private slots:
 
     void on_actToolbarLab_triggered(bool checked); //设置工具栏按钮样式
 //  自定义槽函数
+    void on_actName_triggered();
     void on_spinBoxFontSize_valueChanged(int aFontSize);//改变字体大小的SpinBox的响应
     void on_comboFont_currentIndexChanged(const QString &arg1);//FontCombobox的响应，选择字体名称
 private:

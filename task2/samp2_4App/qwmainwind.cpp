@@ -8,12 +8,17 @@
 #include    <QCoreApplication>
 #include    <Qlabel>
 #include    <QTextCharFormat>
-
+#include <QMessageBox>
 
 void QWMainWind::updateCurFile(QString aFile)
 {//更新当前文件名，并更新状态栏提示
     fCurFileName=aFile;
     fLabCurFile->setText("当前文件："+fCurFileName);
+}
+void QWMainWind::on_actName_triggered()
+{
+    QString info = "姓名：刘东波\n学号：2023414300211\n";
+    QMessageBox::about(this, "用户", info);
 }
 
 void QWMainWind::iniUI()
