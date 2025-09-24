@@ -1,0 +1,22 @@
+# ninja log v6
+3	784	7794546341683941	task1_autogen/timestamp	5760f01ff7424e64
+3	784	7794546341683941	task1_autogen/mocs_compilation.cpp	5760f01ff7424e64
+3	784	7794546341683941	D:/qt/task/task1/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/task1_autogen/timestamp	5760f01ff7424e64
+3	784	7794546341683941	D:/qt/task/task1/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/task1_autogen/mocs_compilation.cpp	5760f01ff7424e64
+790	2157	7794546343091194	CMakeFiles/task1.dir/task1_autogen/mocs_compilation.cpp.obj	bf40d28c71c686d7
+807	2201	7794546343251187	CMakeFiles/task1.dir/main.cpp.obj	b31e37a9eb1590ae
+820	2217	7794546343392018	CMakeFiles/task1.dir/task1.cpp.obj	ca5fd690afd09b7f
+2218	2408	7794546357371573	task1.exe	367b9874d183d54
+7	348	7794554457656835	task1_autogen/timestamp	5760f01ff7424e64
+7	348	7794554457656835	task1_autogen/mocs_compilation.cpp	5760f01ff7424e64
+7	348	7794554457656835	D:/qt/task/task1/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/task1_autogen/timestamp	5760f01ff7424e64
+7	348	7794554457656835	D:/qt/task/task1/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/task1_autogen/mocs_compilation.cpp	5760f01ff7424e64
+349	1764	7794554461077012	CMakeFiles/task1.dir/main.cpp.obj	b31e37a9eb1590ae
+358	1779	7794554461177001	CMakeFiles/task1.dir/task1.cpp.obj	ca5fd690afd09b7f
+1779	1967	7794554475383630	task1.exe	367b9874d183d54
+7	391	7794560412051240	task1_autogen/timestamp	5760f01ff7424e64
+7	391	7794560412051240	task1_autogen/mocs_compilation.cpp	5760f01ff7424e64
+7	391	7794560412051240	D:/qt/task/task1/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/task1_autogen/timestamp	5760f01ff7424e64
+7	391	7794560412051240	D:/qt/task/task1/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/task1_autogen/mocs_compilation.cpp	5760f01ff7424e64
+392	1796	7794560415910316	CMakeFiles/task1.dir/task1.cpp.obj	ca5fd690afd09b7f
+1796	1980	7794560429951849	task1.exe	367b9874d183d54
