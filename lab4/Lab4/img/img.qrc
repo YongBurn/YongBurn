@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>8718db643b40c36c56efefdad8bacb.webp</file>
+        <file>img.qrc</file>
+        <file>login (1).png</file>
+        <file>Snipaste_2025-12-16_16-01-26.png</file>
+        <file>查找.png</file>
+        <file>删除.png</file>
+        <file>添加.png</file>
+        <file>退出.png</file>
+        <file>修改.png</file>
+    </qresource>
+</RCC>
