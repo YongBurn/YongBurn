@@ -1,0 +1,11 @@
+release/chatclient.o
+release/main.o
+release/mainwindow.o
+release/database.o
+release/contactmodel.o
+release/networkthread.o
+release/moc_chatclient.o
+release/moc_mainwindow.o
+release/moc_database.o
+release/moc_contactmodel.o
+release/moc_networkthread.o
