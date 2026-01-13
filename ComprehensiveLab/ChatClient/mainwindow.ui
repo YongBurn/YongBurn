@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>895</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>聊天室客户端</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#title {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    background: white;
+    border: none;
+	border-bottom: 1px solid black;
+	background-color: #2a5caa;
+}
+
+#nickname {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    background: white;
+    border: none;
+	border-bottom: 1px solid black;
+	background-color: #2a5caa;
+}
+
+#loginFrame {
+    background-color: #e6f7ff;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+#loginButton {
+    background-color: #2a5caa;
+    color: white; /* 白色文字 */
+    border: 2px solid #000000; /* 黑色边框 */
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="title">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>多人即时通讯系统</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="chatPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>群聊</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QTextEdit" name="roomTextEdit"/>
+          </item>
+          <item>
+           <widget class="QListWidget" name="userListWidget">
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLineEdit" name="sayLineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="sayBtn">
+            <property name="text">
+             <string>发送</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="logoutBtn">
+            <property name="text">
+             <string>退出</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="contacts">
+            <property name="text">
+             <string>联系人</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>私聊</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QTextEdit" name="privateTextEdit"/>
+          </item>
+          <item>
+           <widget class="QListWidget" name="userListWidget_2">
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLineEdit" name="PrivateChatSayLineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SendprivateChat">
+            <property name="text">
+             <string>发送</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="PrivateChatreturn">
+            <property name="text">
+             <string>返回</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>联系人分组</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="Grouping">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="AddGroup">
+            <property name="text">
+             <string>添加分组</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>所在组的联系人</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="userListWidget_4">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Addcontact">
+            <property name="text">
+             <string>添加联系人</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Return">
+            <property name="text">
+             <string>返回</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="loginPage">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>服务器地址：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>用户：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>密码：</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLineEdit" name="ServerEdit">
+              <property name="text">
+               <string>127.0.0.1</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="UserNameEdit">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="UserPasswordEdit">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QPushButton" name="loginButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: white;       /* 核心：按钮背景设为白色 */
+    color: #333333;                /* 文字设为深灰色，避免白色背景下看不见文字 */
+    border: 1px solid #E5E5E5;     /* 加浅灰色边框，让按钮轮廓更清晰 */
+    border-radius: 4px;            /* 圆角效果，保持美观（与之前样式一致） */
+    padding: 6px 12px;             /* 内边距，控制按钮大小统一 */
+    font-size: 14px;               /* 字体大小统一 */
+    font-weight: 500;              /* 字体加粗，提升可读性 */
+}
+QPushButton:hover {
+    background-color: #F8F8F8;     /* hover时设为浅灰色，增强交互反馈 */
+    border-color: #165DFF;         /* hover时边框变蓝色，提升视觉效果 */
+}
+QPushButton:disabled {
+    background-color: #F5F5F5;     /* 禁用时浅灰色背景 */
+    color: #999999;                /* 禁用时文字灰色 */
+    border-color: #E5E5E5;
+}</string>
+            </property>
+            <property name="text">
+             <string>登录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="registerButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: white;       /* 核心：按钮背景设为白色 */
+    color: #333333;                /* 文字设为深灰色，避免白色背景下看不见文字 */
+    border: 1px solid #E5E5E5;     /* 加浅灰色边框，让按钮轮廓更清晰 */
+    border-radius: 4px;            /* 圆角效果，保持美观（与之前样式一致） */
+    padding: 6px 12px;             /* 内边距，控制按钮大小统一 */
+    font-size: 14px;               /* 字体大小统一 */
+    font-weight: 500;              /* 字体加粗，提升可读性 */
+}
+QPushButton:hover {
+    background-color: #F8F8F8;     /* hover时设为浅灰色，增强交互反馈 */
+    border-color: #165DFF;         /* hover时边框变蓝色，提升视觉效果 */
+}
+QPushButton:disabled {
+    background-color: #F5F5F5;     /* 禁用时浅灰色背景 */
+    color: #999999;                /* 禁用时文字灰色 */
+    border-color: #E5E5E5;
+}</string>
+            </property>
+            <property name="text">
+             <string>注册</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="font">
+               <font>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: black; /* 深灰色文字，在淡蓝面板上清晰可见（和截图一致） */
+    font-size: 14px;
+}</string>
+              </property>
+              <property name="text">
+               <string>服务器地址：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>用户：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>密码：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>姓名：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>电话号码：</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLineEdit" name="ServerEdit_2">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: white;       /* 输入框背景为白色，和淡蓝面板区分 */
+    border: 1px solid #E0E0E0;     /* 细浅灰边框（和截图中输入框的细边框一致） */
+    border-radius: 4px;            /* 输入框小圆角，风格统一 */
+    padding: 4px 6px;              /* 输入框内边距，文字不贴边 */
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border-color: #C0C0C0;         /* 聚焦时边框稍深，提升交互感（可选） */
+}</string>
+              </property>
+              <property name="text">
+               <string>127.0.0.1</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="RegisterUserNameEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: white;       /* 输入框背景为白色，和淡蓝面板区分 */
+    border: 1px solid #E0E0E0;     /* 细浅灰边框（和截图中输入框的细边框一致） */
+    border-radius: 4px;            /* 输入框小圆角，风格统一 */
+    padding: 4px 6px;              /* 输入框内边距，文字不贴边 */
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border-color: #C0C0C0;         /* 聚焦时边框稍深，提升交互感（可选） */
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="RegisterUserPasswordEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: white;       /* 输入框背景为白色，和淡蓝面板区分 */
+    border: 1px solid #E0E0E0;     /* 细浅灰边框（和截图中输入框的细边框一致） */
+    border-radius: 4px;            /* 输入框小圆角，风格统一 */
+    padding: 4px 6px;              /* 输入框内边距，文字不贴边 */
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border-color: #C0C0C0;         /* 聚焦时边框稍深，提升交互感（可选） */
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="AddressNameEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: white;       /* 输入框背景为白色，和淡蓝面板区分 */
+    border: 1px solid #E0E0E0;     /* 细浅灰边框（和截图中输入框的细边框一致） */
+    border-radius: 4px;            /* 输入框小圆角，风格统一 */
+    padding: 4px 6px;              /* 输入框内边距，文字不贴边 */
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border-color: #C0C0C0;         /* 聚焦时边框稍深，提升交互感（可选） */
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="TelephonenumberEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: white;       /* 输入框背景为白色，和淡蓝面板区分 */
+    border: 1px solid #E0E0E0;     /* 细浅灰边框（和截图中输入框的细边框一致） */
+    border-radius: 4px;            /* 输入框小圆角，风格统一 */
+    padding: 4px 6px;              /* 输入框内边距，文字不贴边 */
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border-color: #C0C0C0;         /* 聚焦时边框稍深，提升交互感（可选） */
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="Register">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: white;       /* 核心：按钮背景设为白色 */
+    color: #333333;                /* 文字设为深灰色，避免白色背景下看不见文字 */
+    border: 1px solid #E5E5E5;     /* 加浅灰色边框，让按钮轮廓更清晰 */
+    border-radius: 4px;            /* 圆角效果，保持美观（与之前样式一致） */
+    padding: 6px 12px;             /* 内边距，控制按钮大小统一 */
+    font-size: 14px;               /* 字体大小统一 */
+    font-weight: 500;              /* 字体加粗，提升可读性 */
+}
+QPushButton:hover {
+    background-color: #F8F8F8;     /* hover时设为浅灰色，增强交互反馈 */
+    border-color: #165DFF;         /* hover时边框变蓝色，提升视觉效果 */
+}
+QPushButton:disabled {
+    background-color: #F5F5F5;     /* 禁用时浅灰色背景 */
+    color: #999999;                /* 禁用时文字灰色 */
+    border-color: #E5E5E5;
+}</string>
+            </property>
+            <property name="text">
+             <string>注册</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="returnButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: white;       /* 核心：按钮背景设为白色 */
+    color: #333333;                /* 文字设为深灰色，避免白色背景下看不见文字 */
+    border: 1px solid #E5E5E5;     /* 加浅灰色边框，让按钮轮廓更清晰 */
+    border-radius: 4px;            /* 圆角效果，保持美观（与之前样式一致） */
+    padding: 6px 12px;             /* 内边距，控制按钮大小统一 */
+    font-size: 14px;               /* 字体大小统一 */
+    font-weight: 500;              /* 字体加粗，提升可读性 */
+}
+QPushButton:hover {
+    background-color: #F8F8F8;     /* hover时设为浅灰色，增强交互反馈 */
+    border-color: #165DFF;         /* hover时边框变蓝色，提升视觉效果 */
+}
+QPushButton:disabled {
+    background-color: #F5F5F5;     /* 禁用时浅灰色背景 */
+    color: #999999;                /* 禁用时文字灰色 */
+    border-color: #E5E5E5;
+}</string>
+            </property>
+            <property name="text">
+             <string>返回</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
